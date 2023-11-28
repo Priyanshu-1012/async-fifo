@@ -11,9 +11,9 @@
 // wr_rst ------->|          |<-----rd_rst
 //wr_data =======>|          |
 //                |          |=====> rd_data
-//                |          |-----> fifo_is_full
-//                |          |-----> fifo_is_empty
-//                |__________|-----> fifo_is_overflow
+//                |          |-----> full
+//                |          |-----> empty
+//                |__________|
 
 
 `timescale 1ns / 1ps
