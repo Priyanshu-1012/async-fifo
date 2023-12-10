@@ -59,7 +59,7 @@ module async_fifo
     end
     else if(!full && wr_en)
     begin
-      mem[wr_ptr-1]<=wr_data;
+      mem[wr_ptr]<=wr_data;
       wr_ptr <= (wr_ptr+1)%(1 << (`WPTR+1));
     end
   end
@@ -72,7 +72,7 @@ module async_fifo
     end
     else if(!empty && rd_en)
     begin
-      rd_data <= mem[rd_ptr-1];
+      rd_data <= mem[rd_ptr];
       rd_ptr <= (rd_ptr+1)%(1 << (`WPTR+1));
     end
   end
